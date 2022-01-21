@@ -1,8 +1,8 @@
 const express = require('express') // server kurulumu için gerekli olan express paketi require ediliyor
 const app = express()
 const endPoint = require('./routes/api') // apiyi işaret eden endPoint tanımlanıyor
-const jwt = require('./helper/jwt') // jwt entegrasyonu için ilgili paket require ediliyor
-const errorHandler = require('./helper/error-handler')  // error handler entegrasyonu için route tanımlaması
+const jwt = require('./helpers/jwt') // jwt entegrasyonu için ilgili paket require ediliyor
+const errorHandler = require('./helpers/error-handler')  // error handler entegrasyonu için route tanımlaması
 
 app.use(express.json()); // frontend ile gelen json verilerini parse edebilmeyi saglayan kod
 app.use(jwt())  // jwt entegrasyonunda root kontrolünü gerçekleştirecek kod satırı
